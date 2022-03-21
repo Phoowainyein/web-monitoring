@@ -1,0 +1,14 @@
+target_websites,status_code,response_time
+https://www.google.com,200,0.31
+https://dma.org/,403,0.71
+https://pandas.pydata.org/,200,0.39
+https://github.com/,200,0.3
+https://console.aiven.io/,200,0.08
+https://www.kaggle.com/,200,0.44
+https://www.theconstructsim.com/,200,2.52
+https://grabcad.com/library/,200,0.94
+https://medium.com/,200,0.43
+http://gordonua.com/,200,0.35
+https://www.5.ua/,403,0.35
+https://humanrights.org.ua/,200,0.37
+http://www.example.com,200,0.38

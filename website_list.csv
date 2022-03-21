@@ -1,0 +1,14 @@
+websiteId INTEGER PRIMARY KEY NOT NULL,target_websites TEXT,status_code INTEGER,response_time REAL
+0,https://www.google.com,200,0.31
+1,https://dma.org/,403,0.71
+2,https://pandas.pydata.org/,200,0.39
+3,https://github.com/,200,0.3
+4,https://console.aiven.io/,200,0.08
+5,https://www.kaggle.com/,200,0.44
+6,https://www.theconstructsim.com/,200,2.52
+7,https://grabcad.com/library/,200,0.94
+8,https://medium.com/,200,0.43
+9,http://gordonua.com/,200,0.35
+10,https://www.5.ua/,403,0.35
+11,https://humanrights.org.ua/,200,0.37
+12,http://www.example.com,200,0.38
