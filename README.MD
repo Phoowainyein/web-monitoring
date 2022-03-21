@@ -1,3 +1,7 @@
+## Website-Checker Task ##
+This python script check website availability through Aiven Apache Kafka .Producer producing metrics to kafka and consumer receiving webiste status then stored the data into Aiven PostgreSQL database.
+---
+
 ## Setup Installation ##
 
 
@@ -11,6 +15,18 @@ pip install psycopg2-binary
 ```
 
 ---
+
+## To Run ##
+
+* Run `kafka_website_checker.py` first and follow up with `data_writer.py`
+```php
+python3 kafka_website_checker.py
+```
+```php
+python3 data_writer.py
+```
+---
+
 ## Task Description ##
 
 Your task is to implement a system that monitors website availability over the network, produces metrics about this and passes these events through an Aiven Kafka instance into an Aiven PostgreSQL database.
@@ -28,16 +44,6 @@ The solution should NOT include using any of the following:
 Database ORM libraries - use a Python DB API compliant library and raw SQL queries instead
 Extensive container build recipes - rather focus your effort on the Python code, tests, documentation, etc.
 
----
-## To Run ##
-
-* Run `kafka_website_checker.py` first and follow up with `data_writer.py`
-```php
-python3 kafka_website_checker.py
-```
-```php
-python3 data_writer.py
-```
 ---
 
 ## MY SOLUTION ##
