@@ -2,7 +2,7 @@
 
 This python script check website availability through Aiven Apache Kafka .Producer producing metrics to kafka and consumer receiving webiste status then stored the data into Aiven PostgreSQL database.
 
----
+___
 
 ## Setup Installation ##
 
@@ -13,10 +13,21 @@ pip3 install kafka-python
 ```
 #### For PostgreSQL
 ```php
-pip install psycopg2-binary
+ pip install psycopg2-binary
+```
+---
+
+## Repo Usage ##
+#### Cloning with ssh 
+
+```php
+git clone git@github.com:aiven-recruitment/python-20220315-PhooWaiNyein.git
+```
+#### Then go to the folder 
+```php
+ cd python-20220315-PhooWaiNyein/
 ```
 
----
 
 ## To Run ##
 
@@ -28,7 +39,6 @@ python3 kafka_website_checker.py
 python3 data_writer.py
 ```
 ---
-
 ## Task Description ##
 
 Your task is to implement a system that monitors website availability over the network, produces metrics about this and passes these events through an Aiven Kafka instance into an Aiven PostgreSQL database.
@@ -50,11 +60,9 @@ Extensive container build recipes - rather focus your effort on the Python code,
 
 ## MY SOLUTION ##
 
-
-
 * `functionality.py` has two funtion for kafka prouducer.Function called list_to_csv will generate lists of target websites to csv and monitor funtion will return status code and response time.
 
-* `kafka_website_checker.p` python file has producer and consumer.Producer will send lists of target websites from csv file and consumer fetching the messages from the same topic .After that,the status code and response time will be stored into the same csv file that has been sent.The script will keep monitoring and producing metrics to kafka until we kill the program by pressing `ctrl+c.`
+* `kafka_website_checker.py` python file has producer and consumer.Producer will send lists of target websites from csv file and consumer fetching the messages from the same topic .After that,the status code and response time will be stored into the same csv file that has been sent .The script will keep running every 60 seconds until you press ctrl+c to kill the program.
 
     Expected kafka_website_checker  Output as below! 
     ![Kafka Output](kafkaf_website_monitor.PNG?raw=true "Kafka website monitor python output")
@@ -66,7 +74,6 @@ Extensive container build recipes - rather focus your effort on the Python code,
 
     All the python file should be working properly ,therefore if some errors occurs please contact me :) 
 ---
-
 
 
 ## Helpul links for solving this task 
