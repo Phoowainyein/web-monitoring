@@ -2,10 +2,13 @@
 
 
 #### For Apache Kafka
-> pip3 install kafka-python
-
+```php
+pip3 install kafka-python
+```
 #### For PostgreSQL
-> pip install psycopg2-binary
+```php
+pip install psycopg2-binary
+```
 
 ---
 ## Task Description ##
