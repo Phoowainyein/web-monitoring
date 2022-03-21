@@ -1,13 +1,14 @@
-##Setup
+## Setup Installation ##
 
-#####For Apache Kafka
+
+#### For Apache Kafka
 > pip3 install kafka-python
 
-#####For PostgreSQL
+#### For PostgreSQL
 > pip install psycopg2-binary
 
 ---
-##Task Description
+## Task Description ##
 
 Your task is to implement a system that monitors website availability over the network, produces metrics about this and passes these events through an Aiven Kafka instance into an Aiven PostgreSQL database.
 
@@ -26,7 +27,7 @@ Extensive container build recipes - rather focus your effort on the Python code,
 
 ---
 
-##MY SOLUTION 
+## MY SOLUTION ##
 
 * functionality.py has two funtion for kafka prouducer.Function called list_to_csv will generate lists of target websites to csv and monitor funtion will return status code and response time.
 
@@ -40,5 +41,15 @@ Extensive container build recipes - rather focus your effort on the Python code,
     Expected Data Writer Output as below! 
     ![Data Writer Output](data_writer.PNG?raw=true "Data Writer output")
 
-    All the python funtion should be working properly ,therefore if some errors occurs please contact me :) 
+    All the python file should be working properly ,therefore if some errors occurs please contact me :) 
 ---
+
+## To Run ##
+
+* Run kafka_website_checker.py first and follow up with data_writer.py
+
+## Helpul links for solving this task 
+* https://help.aiven.io/en/articles/5343895-python-examples-for-testing-aiven-for-apache-kafka
+* https://aiven.io/blog/create-your-own-data-stream-for-kafka-with-python-and-faker
+* https://stackoverflow.com/questions/31841191/how-to-stop-python-kafka-consumer-in-program
+* https://stackoverflow.com/questions/27193002/insert-tuple-into-table-psycopg2
