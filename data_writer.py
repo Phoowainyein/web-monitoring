@@ -39,7 +39,7 @@ def fetch_rows(file):
 
 
 def dropAndCreateTable(table_name,*fields):
-    print("We are in drop and CreateTablec function")
+    print("We are in drop and CreateTable function")
     cursor.execute(f"DROP TABLE IF EXISTS {table_name}")
     fields_=list(fields)
     fields_str = ",".join(fields)
