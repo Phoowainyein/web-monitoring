@@ -29,10 +29,20 @@ Database ORM libraries - use a Python DB API compliant library and raw SQL queri
 Extensive container build recipes - rather focus your effort on the Python code, tests, documentation, etc.
 
 ---
+## To Run ##
+
+* Run `kafka_website_checker.py` first and follow up with `data_writer.py`
+```php
+python3 kafka_website_checker.py
+```
+```php
+python3 data_writer.py
+```
+---
 
 ## MY SOLUTION ##
 
-Kaf
+
 
 * `functionality.py` has two funtion for kafka prouducer.Function called list_to_csv will generate lists of target websites to csv and monitor funtion will return status code and response time.
 
@@ -49,15 +59,7 @@ Kaf
     All the python file should be working properly ,therefore if some errors occurs please contact me :) 
 ---
 
-## To Run ##
 
-* Run `kafka_website_checker.py` first and follow up with `data_writer.py`
-```php
-python3 kafka_website_checker.py
-```
-```php
-python3 data_writer.py
-```
 
 ## Helpul links for solving this task 
 * https://help.aiven.io/en/articles/5343895-python-examples-for-testing-aiven-for-apache-kafka
