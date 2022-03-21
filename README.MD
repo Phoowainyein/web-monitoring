@@ -32,14 +32,14 @@ Extensive container build recipes - rather focus your effort on the Python code,
 
 ## MY SOLUTION ##
 
-* functionality.py has two funtion for kafka prouducer.Function called list_to_csv will generate lists of target websites to csv and monitor funtion will return status code and response time.
+* `functionality.py` has two funtion for kafka prouducer.Function called list_to_csv will generate lists of target websites to csv and monitor funtion will return status code and response time.
 
-* kafka_website_checker.py python file has producer and consumer.Producer will send lists of target websites from csv file and consumer fetching the messages from the same topic .After that,the status code and response time will be stored into the same csv file that has been sent .
+* `kafka_website_checker.p` python file has producer and consumer.Producer will send lists of target websites from csv file and consumer fetching the messages from the same topic .After that,the status code and response time will be stored into the same csv file that has been sent.The script will keep monitoring and producing metrics to kafka until we kill the program by pressing `ctrl+c.`
 
     Expected kafka_website_checker  Output as below! 
     ![Kafka Output](kafkaf_website_monitor.PNG?raw=true "Kafka website monitor python output")
 
-* data_writer.py will first prepare the data for creating the table,then it will read the csv data and create table into Aiven PostgreSQL database.
+* `data_writer.py` will first prepare the data for creating the table,then it will read the csv data and create table into Aiven PostgreSQL database.
 
     Expected Data Writer Output as below! 
     ![Data Writer Output](data_writer.PNG?raw=true "Data Writer output")
@@ -49,7 +49,7 @@ Extensive container build recipes - rather focus your effort on the Python code,
 
 ## To Run ##
 
-* Run kafka_website_checker.py first and follow up with data_writer.py
+* Run `kafka_website_checker.py` first and follow up with `data_writer.py`
 
 ## Helpul links for solving this task 
 * https://help.aiven.io/en/articles/5343895-python-examples-for-testing-aiven-for-apache-kafka
