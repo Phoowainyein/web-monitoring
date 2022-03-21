@@ -18,7 +18,8 @@ if __name__ == '__main__':
     while True:
         try:
             start = time.time()
-            os.remove('target_websites.csv')
+            if os.path.exists('target_websites.csv'):
+                os.remove('target_websites.csv')
             lst_to_csv('target_websites.csv',website_lists)#from functionality.py
             time.sleep(2.5)
             data=pd.read_csv('target_websites.csv')
@@ -27,7 +28,7 @@ if __name__ == '__main__':
             for websites in data.target_websites:
                 
                 producer = KafkaProducer(
-                bootstrap_servers='kafka-1ac287d-phoowai1995-bc35.aivencloud.com:17205', #please change your own service uri
+                bootstrap_servers='kafka-1ac287d-phoowai1995-bc35.aivencloud.com:17205',
                 security_protocol="SSL",
                 ssl_cafile="./ca.pem",
                 ssl_certfile="./service.cert",
@@ -71,6 +72,8 @@ if __name__ == '__main__':
             print("Successfully store the data into csv !")
             end = time.time()
             time.sleep(60)
+        except FileNotFoundError:
+            sys.exit("File not found error occurs ,please make sure the file exits in the same folder")
         except KeyboardInterrupt:
             sys.exit("keyboard interrupting !")
         
