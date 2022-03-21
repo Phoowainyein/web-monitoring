@@ -62,17 +62,19 @@ Extensive container build recipes - rather focus your effort on the Python code,
 
 * `functionality.py` has two funtion for kafka prouducer.Function called list_to_csv will generate lists of target websites to csv and monitor funtion will return status code and response time.
 
-* `kafka_website_checker.py` python file has producer and consumer.Producer will send lists of target websites from csv file and consumer fetching the messages from the same topic .After that,the status code and response time will be stored into the same csv file that has been sent .The script will keep running every 60 seconds until you press ctrl+c to kill the program.
+* `kafka_website_checker.py` has producer and consumer.Producer will send  target websites list from csv file for checking it's availity  and consumer fetching the messages from the same topic .After that,the status code and response time will be stored into the same csv file that has been sent .The script will keep running every 60 seconds until you press ctrl+c to kill the program.
 
     Expected kafka_website_checker  Output as below! 
     ![Kafka Output](kafkaf_website_monitor.PNG?raw=true "Kafka website monitor python output")
+    
+ #### Please press ctrl + c to exits the program
 
 * `data_writer.py` will first prepare the data for creating the table,then it will read the csv data and create table into Aiven PostgreSQL database.
 
     Expected Data Writer Output as below! 
     ![Data Writer Output](data_writer.PNG?raw=true "Data Writer output")
 
-    All the python file should be working properly ,therefore if some errors occurs please contact me :) 
+    All should be working properly ,therefore if some errors occurs please contact me :) 
 ---
 
 
