@@ -6,6 +6,13 @@ ___
 
 ## Setup Installation ##
 
+## Python Version : Python 3.8.10
+
+#### Check your python version
+
+```php
+ python3 -V
+```
 
 #### For Apache Kafka
 ```php
