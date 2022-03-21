@@ -27,7 +27,7 @@ if __name__ == '__main__':
             for websites in data.target_websites:
                 
                 producer = KafkaProducer(
-                bootstrap_servers='kafka-1ac287d-phoowai1995-bc35.aivencloud.com:17205',
+                bootstrap_servers='kafka-1ac287d-phoowai1995-bc35.aivencloud.com:17205', #please change your own service uri
                 security_protocol="SSL",
                 ssl_cafile="./ca.pem",
                 ssl_certfile="./service.cert",
