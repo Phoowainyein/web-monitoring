@@ -28,11 +28,11 @@ pip3 install kafka-python
 #### Cloning with ssh 
 
 ```php
-git clone git@github.com:aiven-recruitment/python-20220315-PhooWaiNyein.git
+git@github.com:Phoowainyein/web-monitoring.git
 ```
 #### Then go to the folder 
 ```php
- cd python-20220315-PhooWaiNyein/
+ cd web-monitoring/
 ```
 
 
