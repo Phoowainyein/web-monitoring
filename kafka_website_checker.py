@@ -28,7 +28,7 @@ if __name__ == '__main__':
             for websites in data.target_websites:
                 
                 producer = KafkaProducer(
-                bootstrap_servers='kafka-1ac287d-phoowai1995-bc35.aivencloud.com:17205',
+                bootstrap_servers='your host and port number here',
                 security_protocol="SSL",
                 ssl_cafile="./ca.pem",
                 ssl_certfile="./service.cert",
@@ -41,7 +41,7 @@ if __name__ == '__main__':
             print("Producer  run successfully!") 
             time.sleep(5)
             consumer = KafkaConsumer(
-            bootstrap_servers='kafka-1ac287d-phoowai1995-bc35.aivencloud.com:17205',
+            bootstrap_servers='your host and port number here',
             security_protocol="SSL",
             ssl_cafile="./ca.pem",
             ssl_certfile="./service.cert",
