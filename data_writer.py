@@ -16,7 +16,7 @@ data.rename(columns=renaming_cols,inplace=True)
 data.to_csv('website_list.csv',index=False)
 
 print('Connecting to the PostgreSQL database called website-monitor...')
-connection=psycopg2.connect('postgres://avnadmin:cLxWxhIA7k6FoQdI@pg-1223551b-phoowai1995-bc35.aivencloud.com:17203/website-monitor?sslmode=require')
+connection=psycopg2.connect('your database engine here')
 cursor = connection.cursor()
 
 def table_fields(file):
@@ -71,16 +71,4 @@ if __name__ == '__main__':
     
         
 
-""""
-Dear engineer team : 
-I wrote funtions so I could use those again and again .My idea of writing those functions is ,for example I could have multiple csv files then I could modify those funtion a little bit and 
-feed the csv  files into many tables in our database.
-
-I have dropAndCreateTable funtion that takes table name(which is csv file name called website_list) and it reads the first line of the csv file which is our table fields  as parameters and 
-after that funtion drop if the table already exits and create  a new table.
-
-InsertData funtion execute many excutiion by inserting our table values as a tuple.
-
-Then I print out the data that has been inserted into our table called website_list
-"""
         
